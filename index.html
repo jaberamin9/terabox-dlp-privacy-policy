@@ -1,0 +1,433 @@
+<title>TeraBox Dlp Privacy Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --surface-2: #f2efe8;
+    --text: #1c1e2a;
+    --muted: #5c5f72;
+    --faint: #8a8da0;
+    --accent: #33449e;
+    --accent-soft: #e8ebf9;
+    --border: #e2ded3;
+    --code-bg: #efece3;
+    --good: #2f7a52;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b0e1a;
+      --surface: #12172a;
+      --surface-2: #171d33;
+      --text: #e9eaf2;
+      --muted: #a4a8c0;
+      --faint: #6d7290;
+      --accent: #8fa1ff;
+      --accent-soft: #1c2547;
+      --border: #262c48;
+      --code-bg: #171d33;
+      --good: #5fbf8b;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0b0e1a;
+    --surface: #12172a;
+    --surface-2: #171d33;
+    --text: #e9eaf2;
+    --muted: #a4a8c0;
+    --faint: #6d7290;
+    --accent: #8fa1ff;
+    --accent-soft: #1c2547;
+    --border: #262c48;
+    --code-bg: #171d33;
+    --good: #5fbf8b;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 680px);
+    gap: 56px;
+    justify-content: center;
+    padding-block: 48px 80px;
+  }
+
+  @media (max-width: 880px) {
+    .page { grid-template-columns: minmax(0, 1fr); }
+    nav.toc { display: none; }
+  }
+
+  header.masthead {
+    grid-column: 1 / -1;
+    max-width: 680px;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+
+  h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 10px 0 12px;
+    text-wrap: balance;
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 14.5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+  .meta strong { color: var(--text); font-weight: 600; }
+
+  nav.toc {
+    position: sticky;
+    top: 32px;
+    align-self: start;
+    font-size: 13.5px;
+  }
+  nav.toc .label {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 11.5px;
+    color: var(--faint);
+    margin-bottom: 10px;
+  }
+  nav.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border-left: 1px solid var(--border);
+  }
+  nav.toc a {
+    display: block;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 3px 0 3px 14px;
+    border-left: 2px solid transparent;
+    margin-left: -1px;
+  }
+  nav.toc a:hover { color: var(--text); }
+  nav.toc span.n {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--faint);
+    margin-right: 7px;
+  }
+
+  main { min-width: 0; }
+
+  section {
+    scroll-margin-top: 24px;
+    padding-block: 30px;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  h2 .n {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 22px 0 8px;
+  }
+
+  p { margin: 0 0 12px; max-width: 65ch; }
+  p.lead { color: var(--muted); }
+  ul, ol.plain { margin: 0 0 12px; padding-left: 1.15em; }
+  li { margin-bottom: 6px; max-width: 62ch; }
+
+  code, .mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.88em;
+    background: var(--code-bg);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+  }
+
+  .callout {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 16px 0;
+    font-size: 14.5px;
+    color: var(--muted);
+  }
+  .callout strong { color: var(--text); }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 8px 0 18px;
+  }
+  .data-table th, .data-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .data-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--faint);
+    font-weight: 500;
+  }
+  .data-table td.tag { white-space: nowrap; }
+  .pill {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .pill.none { background: rgba(95, 191, 139, 0.14); color: var(--good); }
+
+  .table-scroll { overflow-x: auto; }
+
+  footer {
+    grid-column: 1 / -1;
+    max-width: 680px;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    color: var(--faint);
+    font-size: 13px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    section { animation: rise 0.4s ease-out both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <div class="eyebrow">Privacy Policy</div>
+    <h1>TeraBox Dlp</h1>
+    <div class="meta">
+      <span><strong>Effective:</strong> September 13, 2026</span>
+      <span><strong>Contact:</strong> <a href="mailto:teraboxdlp@gmail.com">teraboxdlp@gmail.com</a></span>
+      <span><strong>Applies to:</strong> the TeraBox Dlp mobile app (Android &amp; iOS)</span>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="label">On this page</div>
+    <ol>
+      <li><a href="#overview"><span class="n">01</span>Overview</a></li>
+      <li><a href="#data-we-collect"><span class="n">02</span>Data we collect</a></li>
+      <li><a href="#links-you-paste"><span class="n">03</span>Links you paste</a></li>
+      <li><a href="#permissions"><span class="n">04</span>Device permissions</a></li>
+      <li><a href="#advertising"><span class="n">05</span>Advertising</a></li>
+      <li><a href="#third-parties"><span class="n">06</span>Third parties</a></li>
+      <li><a href="#retention"><span class="n">07</span>Retention &amp; deletion</a></li>
+      <li><a href="#children"><span class="n">08</span>Children's privacy</a></li>
+      <li><a href="#rights"><span class="n">09</span>Your rights &amp; choices</a></li>
+      <li><a href="#security"><span class="n">10</span>Security</a></li>
+      <li><a href="#changes"><span class="n">11</span>Changes to this policy</a></li>
+      <li><a href="#contact"><span class="n">12</span>Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2><span class="n">01</span>Overview</h2>
+      <p class="lead">TeraBox Dlp helps you fetch and save video links you already have from TeraBox. This policy explains, plainly, what the app does and doesn't collect.</p>
+      <p>There is no sign-up and no account inside the app — we don't ask for your name, email, or phone number. The only identifier the app generates is a random, anonymous ID stored on your device, described below.</p>
+      <div class="callout">
+        <strong>In short:</strong> no accounts, no name/email/phone collection, no selling of data. The app pings an anonymous, random device ID for basic usage counts, shows ads through Google AdMob, and saves the videos you download to your device's own storage.
+      </div>
+    </section>
+
+    <section id="data-we-collect">
+      <h2><span class="n">02</span>Data we collect</h2>
+      <p>The table below is exhaustive — this is everything the app itself sends anywhere.</p>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr><th>What</th><th>What it is</th><th>Tied to you?</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Anonymous device ID</td>
+              <td>A random ID (like <code>a1b2c3d4-…</code>) generated on first launch and stored only on your device. Used to count distinct active devices per day.</td>
+              <td class="tag"><span class="pill none">Not identifiable</span></td>
+            </tr>
+            <tr>
+              <td>Coins-earned events</td>
+              <td>A count of in-app reward coins you've earned by watching a rewarded ad, recorded against the same anonymous device ID.</td>
+              <td class="tag"><span class="pill none">Not identifiable</span></td>
+            </tr>
+            <tr>
+              <td>Pasted TeraBox link</td>
+              <td>Sent to our server solely to resolve a direct, playable/downloadable video URL. See <a href="#links-you-paste">Links you paste</a>.</td>
+              <td class="tag"><span class="pill none">Not identifiable</span></td>
+            </tr>
+            <tr>
+              <td>Advertising data</td>
+              <td>Collected by Google AdMob to serve and measure ads. See <a href="#advertising">Advertising</a>.</td>
+              <td class="tag"><span class="pill">Google-controlled</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>We never collect your name, email address, phone number, contacts, precise location, or the content of the files you download.</p>
+    </section>
+
+    <section id="links-you-paste">
+      <h2><span class="n">03</span>Links you paste</h2>
+      <p>When you paste or share a TeraBox link into the app, it's sent to our backend, which contacts TeraBox on your behalf to work out a direct video URL and hands that back to the app so it can play or download. The link is processed to serve that one request — we don't build a profile of what you've looked up, and requests aren't linked to your anonymous device ID.</p>
+      <p>Downloaded files are saved straight to your device's own storage (or your photo/media library, if you choose to save there) — we never keep a copy on our servers.</p>
+    </section>
+
+    <section id="permissions">
+      <h2><span class="n">04</span>Device permissions</h2>
+      <p>The app requests only the permissions it needs to do the things you ask it to:</p>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr><th>Permission</th><th>Why we ask</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Storage / media library</td>
+              <td>To save the video you download to your device or photo library, and to let you share it from there.</td>
+            </tr>
+            <tr>
+              <td>Notifications</td>
+              <td>To show you the download-in-progress notification (e.g. "Downloading… 42%") and let you know when a download finishes or fails. These notifications are generated entirely on your device — no remote push service is involved.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="advertising">
+      <h2><span class="n">05</span>Advertising</h2>
+      <p>The app shows ads through <strong>Google AdMob</strong>, including optional rewarded ads you can watch to earn in-app coins. Google, as an independent controller, may collect device and advertising identifiers, approximate location, and ad interaction data to serve and measure these ads, and to personalize them where your settings allow.</p>
+      <p>You can review or limit this in your device's ad settings (Android: <span class="mono">Settings → Privacy → Ads</span>; iOS: <span class="mono">Settings → Privacy → Tracking</span>), and read Google's own practices at their <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://adssettings.google.com" target="_blank" rel="noopener">Ads Settings</a>.</p>
+    </section>
+
+    <section id="third-parties">
+      <h2><span class="n">06</span>Third parties</h2>
+      <p>We use a small number of infrastructure providers to run the app. None of them receive anything that identifies you personally:</p>
+      <ul>
+        <li><strong>Supabase</strong> — stores the anonymous device-ID activity ping and coin-earned counters described in <a href="#data-we-collect">Data we collect</a>.</li>
+        <li><strong>Google AdMob</strong> — serves ads, as described in <a href="#advertising">Advertising</a>.</li>
+        <li><strong>TeraBox</strong> — the third-party service your pasted links point to; resolving a download means our server talks to TeraBox's servers on your behalf.</li>
+      </ul>
+      <p>We do not sell your data, and we do not share it with anyone for their own marketing purposes.</p>
+    </section>
+
+    <section id="retention">
+      <h2><span class="n">07</span>Retention &amp; deletion</h2>
+      <p>The anonymous device ID lives in your device's local app storage until you uninstall the app or clear its data — uninstalling removes it completely, and reinstalling generates a brand-new one. The daily-activity and coins-earned records tied to that ID are kept only in aggregate for basic usage counts, and are never combined with anything that could re-identify a person.</p>
+      <p>Pasted links are used transiently to resolve a download and are not retained afterward.</p>
+    </section>
+
+    <section id="children">
+      <h2><span class="n">08</span>Children's privacy</h2>
+      <p>TeraBox Dlp is not directed at children under 13, and we do not knowingly collect personal information from children. If you believe a child has provided us information, contact us at <a href="mailto:teraboxdlp@gmail.com">teraboxdlp@gmail.com</a> and we'll address it.</p>
+    </section>
+
+    <section id="rights">
+      <h2><span class="n">09</span>Your rights &amp; choices</h2>
+      <p>Because the app doesn't collect anything that identifies you by name, there's no account data to hand over on request — but you still have control:</p>
+      <ul>
+        <li><strong>Reset your device ID</strong> at any time by uninstalling and reinstalling the app.</li>
+        <li><strong>Opt out of ad personalization</strong> through your device's ad settings, as described in <a href="#advertising">Advertising</a>.</li>
+        <li><strong>Ask us a question or raise a concern</strong> — including under GDPR, CCPA, or similar laws — by emailing <a href="mailto:teraboxdlp@gmail.com">teraboxdlp@gmail.com</a>. If you can share your device's anonymous ID (found in the app's settings, if applicable), we can locate and delete the associated aggregate records.</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2><span class="n">10</span>Security</h2>
+      <p>We use industry-standard measures — encrypted connections (HTTPS) between the app and our backend, and access controls on our infrastructure — to protect the limited data described above. No method of transmission or storage is 100% secure, but nothing here is designed to identify you personally in the first place.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="n">11</span>Changes to this policy</h2>
+      <p>If this policy changes, we'll update the effective date at the top of this page. Material changes will be reflected here before or as they take effect — we encourage you to check back periodically.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="n">12</span>Contact</h2>
+      <p>Questions, requests, or concerns about this policy or your data:</p>
+      <p><a href="mailto:teraboxdlp@gmail.com">teraboxdlp@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    TeraBox Dlp is not affiliated with, endorsed by, or sponsored by TeraBox. This policy covers the TeraBox Dlp app only.
+  </footer>
+</div>
