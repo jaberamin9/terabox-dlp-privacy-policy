@@ -303,9 +303,9 @@
     <section id="overview">
       <h2><span class="n">01</span>Overview</h2>
       <p class="lead">TeraBox Dlp helps you fetch and save video links you already have from TeraBox. This policy explains, plainly, what the app does and doesn't collect.</p>
-      <p>There is no sign-up and no account inside the app — we don't ask for your name, email, or phone number. The only identifier the app generates is a random, anonymous ID stored on your device, described below.</p>
+      <p>There is no sign-up and no account inside the app — we don't ask for your name, email, or phone number. The only identifier the app generates is an anonymous ID tied to your device, described below.</p>
       <div class="callout">
-        <strong>In short:</strong> no accounts, no name/email/phone collection, no selling of data. The app pings an anonymous, random device ID for basic usage counts, shows ads through Google AdMob, and saves the videos you download to your device's own storage.
+        <strong>In short:</strong> no accounts, no name/email/phone collection, no selling of data. The app uses an anonymous device ID for basic usage counts and your in-app coin balance, shows ads through Google AdMob, and saves the videos you download to your device's own storage.
       </div>
     </section>
 
@@ -320,7 +320,12 @@
           <tbody>
             <tr>
               <td>Anonymous device ID</td>
-              <td>A random ID (like <code>a1b2c3d4-…</code>) generated on first launch and stored only on your device. Used to count distinct active devices per day.</td>
+              <td>On Android, derived from a device setting and run through a one-way hash before we ever see it; on iOS, a random ID generated on first launch and kept in the device's secure keychain. Stable for the life of the device, including across reinstalls — see <a href="#retention">Retention &amp; deletion</a>. Used to count distinct active devices per day.</td>
+              <td class="tag"><span class="pill none">Not identifiable</span></td>
+            </tr>
+            <tr>
+              <td>Coin balance</td>
+              <td>Your in-app reward-coin balance, kept on our server against this same device ID so it isn't lost or reset by clearing the app's storage.</td>
               <td class="tag"><span class="pill none">Not identifiable</span></td>
             </tr>
             <tr>
@@ -382,7 +387,7 @@
       <h2><span class="n">06</span>Third parties</h2>
       <p>We use a small number of infrastructure providers to run the app. None of them receive anything that identifies you personally:</p>
       <ul>
-        <li><strong>Supabase</strong> — stores the anonymous device-ID activity ping and coin-earned counters described in <a href="#data-we-collect">Data we collect</a>.</li>
+        <li><strong>Supabase</strong> — stores the anonymous device-ID activity ping, your coin balance, and coin-earned counters described in <a href="#data-we-collect">Data we collect</a>.</li>
         <li><strong>Google AdMob</strong> — serves ads, as described in <a href="#advertising">Advertising</a>.</li>
         <li><strong>TeraBox</strong> — the third-party service your pasted links point to; resolving a download means our server talks to TeraBox's servers on your behalf.</li>
       </ul>
@@ -391,7 +396,7 @@
 
     <section id="retention">
       <h2><span class="n">07</span>Retention &amp; deletion</h2>
-      <p>The anonymous device ID lives in your device's local app storage until you uninstall the app or clear its data — uninstalling removes it completely, and reinstalling generates a brand-new one. The daily-activity and coins-earned records tied to that ID are kept only in aggregate for basic usage counts, and are never combined with anything that could re-identify a person.</p>
+      <p>The anonymous device ID is stable for the life of the device — unlike a value stored only in the app's own local data, it isn't reset by uninstalling the app, reinstalling it, or clearing its storage (that's by design: it's also what keeps your coin balance intact through those same actions). It changes only if you reset or wipe the device at the operating-system level. The daily-activity and coins-earned records tied to that ID are kept only in aggregate for basic usage counts, and are never combined with anything that could re-identify a person.</p>
       <p>Pasted links are used transiently to resolve a download and are not retained afterward.</p>
     </section>
 
@@ -404,7 +409,6 @@
       <h2><span class="n">09</span>Your rights &amp; choices</h2>
       <p>Because the app doesn't collect anything that identifies you by name, there's no account data to hand over on request — but you still have control:</p>
       <ul>
-        <li><strong>Reset your device ID</strong> at any time by uninstalling and reinstalling the app.</li>
         <li><strong>Opt out of ad personalization</strong> through your device's ad settings, as described in <a href="#advertising">Advertising</a>.</li>
         <li><strong>Ask us a question or raise a concern</strong> — including under GDPR, CCPA, or similar laws — by emailing <a href="mailto:teraboxdlp@gmail.com">teraboxdlp@gmail.com</a>. If you can share your device's anonymous ID (found in the app's settings, if applicable), we can locate and delete the associated aggregate records.</li>
       </ul>
